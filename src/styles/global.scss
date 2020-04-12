@@ -1,0 +1,412 @@
+$primary-color: #381696;
+$primary-text-color: #fff;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin-top: 0
+}
+/* System Fonts as used by Medium and WordPress */
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  background-color: #fff;
+  //background-color: #fff;
+  border-top: 30px solid $primary-color;
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.site-wrapper {
+  padding: 32px;
+  max-width: 1140px;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+}
+.navigation {
+  font-weight: 300;
+  a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 8px 0;
+    &[aria-current] {
+      color: $primary-color;
+      font-weight: 700;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.top-image{
+  background-image: url("/assets/circles-light.png");
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-bottom: 32px;
+  align-items: center;
+  position: absolute;
+}
+.site-title a {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  left: 20px
+}
+.hero-header {
+  padding: 70px 0 30px;
+  margin: 0 0 64px;
+  max-width: 100%;
+  text-align: center;
+}
+.headline {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.button {
+  padding: 18px 27px;
+  display: inline-block;
+  background:#fff;
+  border: 1px solid #d3d6e7;
+  border-radius: 9px;
+  text-decoration: none;
+  color:#868892;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 20px 0 0;
+  transition: background-color .3s linear;
+  &.-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $primary-text-color;
+    &:hover {
+      background-color: #10072b;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    background-color: #d3d6e7;
+    color: #00062b;
+  }
+}
+.primary-content {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.primary-content-link{
+  font-size: 16px;
+  margin-bottom: 32px;
+  margin-top: -10px;
+  font-weight: 300; 
+}
+.post {
+  padding: 0;
+  background:white;
+  line-height: 1.5;
+  > .blog-post-content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  > .blog-post-content *:last-child,
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  .post-title {
+    text-align: center;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+    font-size: 2rem;
+  }
+  .post-meta {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+}
+.post-thumbnail {
+  text-align: center;
+  min-height: 380px;
+  //background-image: url('/assets/circles-light.png');
+  background-color: #493b8a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  margin-bottom: 36px;
+  color: white;
+  display: grid;
+  align-content: center;
+  position: relative;
+  padding: 18px;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  .post-meta {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0;
+  }
+}
+.grids {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 32px;
+  margin-top: 32px;
+}
+.card {
+  display: grid;
+  background:white;
+  border-radius: 9px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 30px #d5d5d5;
+  overflow: hidden;
+  line-height: 1.5;
+  &:hover .post-link {
+    color: $primary-color;
+  }
+  > a img {
+    display: block;
+  }
+  > header {
+    padding: 24px;
+  }
+  > h2:first-child {
+    margin: 0 0 0.5rem 0;
+  }
+  .post-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  .post-meta {
+    font-weight: 100;
+    margin-bottom: 0;
+  }
+  .post-link {
+    color: #333;
+    text-decoration: none;
+  }
+}
+.post-meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+.site-footer {
+  text-align: center;
+  margin: 90px 0 16px;
+  color: #666;
+  a {
+    font-weight: 700;
+  }
+}
+.form-container {
+  background-color: #f7f8fe;
+  padding: 32px;
+  border: 1px solid #d3d6e7;
+  border-radius: 9px;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  input[type=text],
+  input[type=email],
+  textarea {
+    appearance: none;
+    border: 1px solid #d3d6e7;
+    border-radius: 6px;
+    line-height: 32px;
+    padding: 6px 12px;
+    width: calc(100% - 24px);
+    margin-bottom: 1.5rem;
+  }
+  textarea {
+    margin-bottom: 2rem;
+    height: 150px;
+  }
+}
+.two-grids {
+  display: grid;
+  grid-gap: 32px;
+  &.-contact {
+    .post-thumbnail {
+      min-height: 240px !important;
+    }
+  }
+}
+/* Portrait and Landscape */
+@media only screen 
+and (min-width: 768px) {
+.grids {
+  grid-template-columns: 1fr 1fr;
+}
+}
+@media only screen 
+  and (min-width: 1024px) {
+  .grids {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .two-grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px;
+  }
+}
+
+.popupModal1 > input { /* ラジオボックス非表示 */
+  display: none;
+}
+.popupModal1 > input:nth-child(1) + label { 
+  cursor: pointer;
+}
+.modalPopup2 { /* 初期設定 ポップアップ非表示 */
+  display: none;
+}
+
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label + .modalPopup2 {/* ラジオ１ チェックでポップアップ表示 */
+  display: block;
+  z-index: 998;
+  position: fixed;
+  width: 90%;
+  height: 80%;
+  border-radius: 20px;
+  left: 50%;
+  top: 50%;
+  margin-top: 30px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {/* PCのときはページの真ん中の600x600領域 */
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label + .modalPopup2{
+       width: 600px;
+       height: 600px;
+       padding: 30px;
+
+  }
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label {
+   left: 58% !important;
+   top: 52.5% !important;
+   margin-left: 270px !important;
+   margin-top: -310px !important;
+}
+}
+
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label + .modalPopup2 > div {/* */
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label + .modalPopup2 > div > iframe {
+  width: 100%;
+    height:100%;
+    border:none;
+    display:block;
+}
+
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label + .modalPopup2 > div > img {/* ポップアップの中の要素 */
+max-width: 100%;
+}
+.popupModal1 > input:nth-child(1) + label ~ label {
+  display: none;/* ラジオ１ 以外のラベルを初期は非表示 */
+
+}
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.70);
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 997;
+  text-indent: -999999px;
+  overflow: hidden;
+}
+.popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label {
+  background: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  position: fixed;
+  left: 20px;
+  bottom: 45px;
+  z-index: 999;
+  width: 44pt;
+  height: 44pt;
+  font-size: 40px;
+  border-radius: 50%;
+  line-height: 39pt;
+  text-align: center;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.popupModal1 > input:nth-child(1) + label + input:nth-child(3):checked + label + input:nth-child(5) + label + .modalPopup2,
+.popupModal1 > input:nth-child(1) + label + input:nth-child(3) + label + input:nth-child(5):checked + label + .modalPopup2 { /* ラジオ２と３ どっちかチェックでポップアップ非表示 */
+  display: none;
+}
+
+
+.modalPopup2 {
+  animation: fadeIn 1s ease 0s 1 normal;
+  -webkit-animation: fadeIn 1s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.popupModal1 .modalTitle {
+   padding-bottom: .5em;
+   margin: .5em 0;
+   border-bottom:
+   1px solid #ccc;
+   font-weight: bold;
+}
+.popupModal1 .modalMain {
+   color:#222;
+   text-align: left;
+   font-size: 14px;
+   line-height: 1.8em;
+}
+
+.modalImage {
+    height: auto;
+    width: auto;
+}

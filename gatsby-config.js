@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Portfolio Page`,
     description: `Ryosuke Hagiwara Portfolio Page`,
-    siteUrl: ``,
+    siteUrl: `https://elegant-feynman-374b85.netlify.com/`,
     home: {
       title: `Ryosuke Hagiwara`,
       description: `BackEnd Developer`

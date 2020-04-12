@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 const PostLink = ({ post }) => (
   <article className="card ">
-    <Link to={post.frontmatter.path}>
-      {!!post.frontmatter.thumbnail && (
-        <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title + "- Featured Shot"} />
-      )}
-    </Link>
     <header>
       <div className="popupModal1">
         <input type="radio" name="modalPop" id="pop11" />
-        <label htmlFor="pop11">{post.frontmatter.title}</label>
+        <label htmlFor="pop11">
+          {!!post.frontmatter.thumbnail && (
+            <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title + "- Featured Shot"} />
+          )}
+          <p className="card-title">{post.frontmatter.title}</p>
+        </label>
         <input type="radio" name="modalPop" id="pop12" />
         <label htmlFor="pop12">CLOSE</label>
         <input type="radio" name="modalPop" id="pop13" />

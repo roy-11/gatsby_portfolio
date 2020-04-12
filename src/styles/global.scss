@@ -196,8 +196,9 @@ a {
   > a img {
     display: block;
   }
-  > header {
-    padding: 24px;
+  .card-title{
+    padding:12px;
+    word-break:normal;
   }
   > h2:first-child {
     margin: 0 0 0.5rem 0;

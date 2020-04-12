@@ -4,17 +4,18 @@ path: /typescript-googlemap
 date: 2020-04-12T12:05:00.870Z
 title: TypeScriptを使用したGoogleMapのサンプルプロジェクト
 thumbnail: /assets/typescript_googlemap-min3.jpg
+metaDescription: typescript-googlemap
 ---
+
 # 概要
 
 TypeScript を使用して GoogleMap 上にデータをマッピングするサンプルプロジェクトです。このプロジェクトは、以下のようなトピックを包含しています。
 
-* データのマッピングとクリック時のコンテンツポップアップ
-* カスタムクラスによる Googlemaps のメソッドをプライベート化
-* インターフェースによるクラスのプロパティ及びメソッドのチェック
-* 利用ライブラリ：parcel, dotenv, faker
+- データのマッピングとクリック時のコンテンツポップアップ
+- カスタムクラスによる Googlemaps のメソッドをプライベート化
+- インターフェースによるクラスのプロパティ及びメソッドのチェック
+- 利用ライブラリ：parcel, dotenv, faker
 
-<br>
 <div style="display:flex;justify-content:space-around;">
 <a href="https://github.com/ryosuke-11/typescript_googlemap" 
    style="
